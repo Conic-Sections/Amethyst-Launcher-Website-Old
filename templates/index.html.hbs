@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Magical Launcher</title>
+  <link rel="stylesheet" href="/assets/main.css">
+  <script src="/assets/jquery.js"></script>
+</head>
+
+<body class="hidden">
+  <header>
+    <a href="/" class="logo">Logo</a>
+    <div>
+      <a href="/guide">指南</a>
+      <a href="/guide/api">API</a>
+      <a href="/download">下载</a>
+      <div>生态系统
+        <div class="menu"></div>
+      </div>
+      <a href="/about">关于</a>
+    </div>
+  </header>
+  <section class="section1">
+    <div>
+      <div class="main-title-bar">Magical Launcher</div>
+      <div class="main-title-button">
+        <a href="/doc" style="background-color: #510f61; transition: .1s all ease" class="main-button1">快速上手 <svg
+            style="margin-left: 6px; transform: translateX(0px); transition: .1s all ease"
+            xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" data-v-8f6e9de2="">
+            <path fill="#ffffff"
+              d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z"
+              data-v-8f6e9de2=""></path>
+          </svg></a>
+        <a href="/download" class="go-to-download">安装</a>
+      </div>
+    </div>
+  </section>
+  <section class="section2">
+    <div>
+      <div class="title">Magical Launcher 的好处都有啥?</div>
+      <div class="content">
+        <div class="content-item-1">
+          <div class="icon"><i class="rocket-launch"></i></div>
+          <div class="title"><span class="highlight">高性能</span>与<span class="highlight">兼容性</span></div>
+          <div class="desc">使用 Rust 编写的高性能启动器，支持在 Windows, Linux 和 MacOS 平台上运行。Magical Launcher
+            拥有高并发的游戏安装器，可以极大提升下载速度，让您快速开始游戏！</div>
+        </div>
+        <div class="content-item-2">
+          <div class="icon"><i class="feather"></i></div>
+          <div class="title">集成丰富的<span class="highlight">辅助功能</span></div>
+          <div class="desc">Magical Launcher 拥有大量辅助功能，这些功能可以确保您轻松地管理您的游戏，例如资源包预览、游戏规则修改、投影文件预览等功能，同时无缝地向您介绍 Minecraft
+            方面的知识、新版本功能等。</div>
+        </div>
+        <div class="content-item-3">
+          <div class="icon"><i class="car-burst"></i></div>
+          <div class="title"><span class="highlight">高级</span>的崩溃分析</div>
+          <div class="desc">Magical
+            Launcher 拥有强大的崩溃分析功能，帮助您了解崩溃的原因，以便您第一时间修复错误。同时，Magical Launcher 能在启动游戏前检测可能导致崩溃的模组，并提供模组自动测试功能，帮助您筛选出引发崩溃的模组
+          </div>
+        </div>
+        <div class="content-item-4">
+          <div class="icon"><i class="puzzle-piece-simple"></i></div>
+          <div class="title"><span class="highlight">独一无二的</span>插件系统</div>
+          <div class="desc">Magical Launcher 提供了扩展接口以及官方的插件市场，如果你需要更多功能，尝试在插件市场中查找它们吧。扩展在单独的进程中运行，Magical Launcher
+            会确保它们不会减慢您的启动器得速度</div>
+        </div>
+        <div class="content-item-4">
+          <div class="icon"><i class="browsers"></i></div>
+          <div class="title"><span class="highlight">高度自定义</span>的界面</div>
+          <div class="desc">Magical Launcher 的插件系统不仅可以为启动器添加新功能，还可以设置 UI 各部分的颜色、形状等样式。通过在插件市场中搜索相应的插件，您可以自定义启动器的界面</div>
+        </div>
+        <div class="content-item-4">
+          <div class="icon"><i class="bullseye-pointer"></i></div>
+          <div class="title"><span class="highlight">开箱及用</span>的体验</div>
+          <div class="desc">从第一次发布起就拥有多种辅助功能。各种工具触手可及，无需手动编写插件</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <p>Copyright © 2022 Magical Launcher 保留所有权利</p>
+    <p><a href="https://beian.miit.gov.cn/">赣ICP备2022008840号-1</a> <a
+        href="https://www.beian.gov.cn/portal/registerSystemInfo">赣公网安备36092202000162号</a></p>
+  </footer>
+  <script>
+    window.onload = function () {
+      let body = document.getElementsByTagName('body')[0];
+      $(body).removeClass("hidden")
+    }
+    // 获取滚动条位置
+    $(window).scroll(function () {
+      let scroll = $(window).scrollTop();
+      console.log(scroll)
+      // 滚动到200时将id为sec2的元素显示出来
+      if (scroll >= 300) {
+        $("#sec2").removeClass("hidden");
+      }
+    })
+  </script>
+</body>
+
+</html>
