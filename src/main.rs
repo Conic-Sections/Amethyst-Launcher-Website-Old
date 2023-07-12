@@ -19,20 +19,28 @@
 #[macro_use]
 extern crate rocket;
 
-use rocket::fs::FileServer;
+use std::path::{Path, PathBuf};
+
+use crate::router::web::assets;
+use once_cell::sync::Lazy;
 use rocket_dyn_templates::Template;
 use router::{
     api::github_api,
-    web::{download_page, index, update_page},
+    web::{download_page, guide, index, internal_server_error, update_page},
 };
 
-pub mod app;
+pub mod controller;
 pub mod router;
+
+const DOCUMENT_ROOT: Lazy<PathBuf> = Lazy::new(|| Path::new("document").to_path_buf());
 
 #[launch]
 fn rocket() -> _ {
     rocket::build()
-        .mount("/", routes![index, download_page, update_page, github_api])
-        .mount("/assets", FileServer::from("public/"))
+        .mount(
+            "/",
+            routes![index, download_page, update_page, github_api, assets, guide],
+        )
+        .register("/", catchers![internal_server_error])
         .attach(Template::fairing())
 }

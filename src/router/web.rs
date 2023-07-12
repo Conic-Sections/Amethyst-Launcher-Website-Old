@@ -16,11 +16,33 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
+use std::path::{Path, PathBuf};
+
+// use anyhow::Result;
+use rocket::{fs::NamedFile, http::Status};
 use rocket_dyn_templates::{context, Template};
+
+use crate::controller;
+
+#[get("/assets/<file..>")]
+pub async fn assets(file: PathBuf) -> Option<NamedFile> {
+    println!("file: {:?}", file);
+    NamedFile::open(Path::new("public/assets").to_path_buf().join(file))
+        .await
+        .ok()
+}
 
 #[get("/")]
 pub async fn index() -> Template {
     Template::render("index", context! {foo: 123})
+}
+
+#[get("/guide/<path..>")]
+pub async fn guide(path: PathBuf) -> Result<Template, Status> {
+    match controller::guide::main(path).await {
+        Ok(t) => Ok(t),
+        Err(_) => Err(Status::new(404)),
+    }
 }
 
 #[get("/download")]
@@ -33,3 +55,7 @@ pub async fn update_page() -> Template {
     Template::render("update", context! {})
 }
 
+#[catch(default)]
+pub fn internal_server_error() -> Template {
+    Template::render("error", context! {})
+}
