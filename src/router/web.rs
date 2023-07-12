@@ -16,18 +16,7 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-use std::path::{Path, PathBuf};
-
-use rocket::fs::NamedFile;
 use rocket_dyn_templates::{context, Template};
-
-#[get("/assets/<file..>")]
-pub async fn assets(file: PathBuf) -> Option<NamedFile> {
-    println!("file: {:?}", file);
-    NamedFile::open(Path::new("public/assets").to_path_buf().join(file))
-        .await
-        .ok()
-}
 
 #[get("/")]
 pub async fn index() -> Template {

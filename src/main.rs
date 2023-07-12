@@ -19,10 +19,11 @@
 #[macro_use]
 extern crate rocket;
 
+use rocket::fs::FileServer;
 use rocket_dyn_templates::Template;
 use router::{
     api::github_api,
-    web::{assets, download_page, index, update_page},
+    web::{download_page, index, update_page},
 };
 
 pub mod app;
@@ -31,9 +32,7 @@ pub mod router;
 #[launch]
 fn rocket() -> _ {
     rocket::build()
-        .mount(
-            "/",
-            routes![index, assets, download_page, update_page, github_api],
-        )
+        .mount("/", routes![index, download_page, update_page, github_api])
+        .mount("/assets", FileServer::from("public/"))
         .attach(Template::fairing())
 }
