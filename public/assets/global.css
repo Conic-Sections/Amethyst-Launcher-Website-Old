@@ -103,3 +103,7 @@ i.bullseye-pointer::before {
 i.bars::before {
     content: "\f0c9";
 }
+
+i.download::before {
+    content: "\e4e7";
+}
