@@ -9,20 +9,20 @@
 > 
 > 如果你需要报告问题，请转到前往[GitHub Issues](https://github.com/Broken-Deer/magical-launcher/issues)
 
-## 什么是 Amethyst?
+## 什么是 Amethyst Launcher?
 
-Amethyst 是一款 Minecraft 启动器，它基于 tauri 构建，并提供了一套安全的插件接口，方便用户自己向启动器添加功能并分享给其他用户，同时确保安装者安全。
+Amethyst Launcher 是一款 Minecraft 启动器，它基于 tauri 构建，并提供了一套安全的插件接口，方便用户自己向启动器添加功能并分享给其他用户，同时确保安装者安全。
 
 下面是一个最基本的示例:
 
 <!-- todo：演示视频 -->
 
-上面的示例展示了 Amethyst 的几个核心功能:
+上面的示例展示了 Amethyst Launcher 的几个核心功能:
 
 - **安装游戏与启动**: 可以安装游戏或者启动游戏。
-- **插件系统**: Amethyst 可以通过插件为启动器添加各种功能。
+- **插件系统**: Amethyst Launcher 可以通过插件为启动器添加各种功能。
 
-事实上，Amethyst 具有许多有趣的功能：
+事实上，Amethyst Launcher 具有许多有趣的功能：
 
 - 可以下载 `Minecraft`, `Forge`, `Fabric`, `Optifine`, `Quilt`, 会自动选择速度最快的镜像服务器安装游戏
 - **跨平台**，使用rust编写的启动器，能够在 Windows, MacOS 和 GNU/Linux 上运行，~~甚至可以在手机上运行~~
