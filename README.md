@@ -1,2 +1,2 @@
 # magical-launcher-website
-Magical Launcher
+Amethyst

@@ -1,8 +1,8 @@
 # 快速上手
 
-## 安装 Magical Launcher
+## 安装 Amethyst
 
-快速体验 Magical Launcher 的方法就是安装它。你可以到[这里](https://www.magicallauncher.org/)或者[GitHub releases](https://github.com/Broken-Deer/magical-launcher)下载它。
+快速体验 Amethyst 的方法就是安装它。你可以到[这里](https://www.magicallauncher.org/)或者[GitHub releases](https://github.com/Broken-Deer/magical-launcher)下载它。
 
 ## 使用开发版本
 

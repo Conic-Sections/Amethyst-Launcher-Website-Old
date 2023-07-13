@@ -1,5 +1,5 @@
 /*
- * Magical Launcher Core
+ * Amethyst Website
  * Copyright (C) 2023 Broken-Deer <old_driver__@outlook.com> and contributors
  *
  * This program is free software, you can redistribute it and/or modify
@@ -53,9 +53,4 @@ pub async fn download_page() -> Template {
 #[get("/update")]
 pub async fn update_page() -> Template {
     Template::render("update", context! {})
-}
-
-#[catch(default)]
-pub fn internal_server_error() -> Template {
-    Template::render("error", context! {})
 }
