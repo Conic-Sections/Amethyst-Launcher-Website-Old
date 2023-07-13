@@ -3,9 +3,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>指南 - Amethyst Launcher</title>
-
   <link rel="icon" href="/assets/favicon.ico">
   <link rel="stylesheet" href="/assets/guide.css">
   <link rel="stylesheet" href="/assets/global.css">
@@ -155,7 +154,7 @@
   </header>
   {{!-- content --}}
   <div class="content">
-    <aside>
+    <aside class="hidden">
       <nav>
         <div class="group">
           <a class="item" id="index" href="/guide">简介</a>
@@ -170,8 +169,15 @@
         </div>
       </nav>
     </aside>
-    <main>
-      {{{ content }}}
+    <main onclick="$('aside').addClass('hidden')">
+      <div class="sidebar_button" style="font-family: fa-pro; font-size: 20px; margin-bottom: 40px; margin-top: -20px">
+        <i class="bars"
+          style="font-style: normal" onclick="window.setTimeout(function() {$('aside').toggleClass('hidden');}, 100);"></i>
+      {{!-- 目录 --}}
+      </div>
+      <div>
+        {{{ content }}}
+      </div>
       <div style="width: 100%; height: 100px"></div>
     </main>
   </div>
