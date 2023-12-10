@@ -25,7 +25,7 @@ use crate::router::web::assets;
 use once_cell::sync::Lazy;
 use rocket_dyn_templates::Template;
 use router::{
-    api::github_api,
+    api::{github_api, github_ci_api},
     web::{download_page, guide, index, update_page},
 };
 
@@ -39,7 +39,7 @@ fn rocket() -> _ {
     rocket::build()
         .mount(
             "/",
-            routes![index, download_page, update_page, github_api, assets, guide],
+            routes![index, download_page, update_page, github_api, github_ci_api, assets, guide],
         )
         // .register("/", catchers![])
         .attach(Template::fairing())

@@ -19,7 +19,6 @@ pub async fn main(path: PathBuf) -> Result<Template> {
 
     let markdown_input = tokio::fs::read_to_string(markdown_path.clone()).await?;
     let html_output = markdown_to_html(&markdown_input).await;
-    println!("{:#?}", html_output);
 
     Ok(Template::render(
         "guide",

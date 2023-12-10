@@ -1,0 +1,16 @@
+name: Amethyst Launcher Webside Build
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Build artifact
+        run: cargo build --release
+      - name: Show artifact
+        run: cd target/release && ls -l
