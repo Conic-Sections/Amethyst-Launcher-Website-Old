@@ -54,3 +54,8 @@ pub async fn download_page() -> Template {
 pub async fn update_page() -> Template {
     Template::render("update", context! {})
 }
+
+#[get("/market")]
+pub async fn market_page() -> Template {
+    Template::render("market", context! {})
+}
