@@ -4,6 +4,8 @@ limits = {form = "4 MiB", json = "2 MiB", bytes = "4 MiB", string = "1 MiB"}
 
 [debug]
 port = 8000
-# [release]
-# port = 82
+
+[release]
+address = "192.168.114.197"
+port = 7002
 
