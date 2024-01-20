@@ -1,5 +1,5 @@
 /*
- * Amethyst Website
+ * Hedwig Launcher Website
  * Copyright (C) 2023 Broken-Deer <old_driver__@outlook.com> and contributors
  *
  * This program is free software, you can redistribute it and/or modify
@@ -26,7 +26,7 @@ use once_cell::sync::Lazy;
 use rocket_dyn_templates::Template;
 use router::{
     api::{github_api, github_ci_api},
-    web::{download_page, guide, index, update_page},
+    web::{download_page, guide, index, update_page, market_page},
 };
 
 pub mod controller;
@@ -39,7 +39,16 @@ fn rocket() -> _ {
     rocket::build()
         .mount(
             "/",
-            routes![index, download_page, update_page, github_api, github_ci_api, assets, guide],
+            routes![
+                index,
+                download_page,
+                update_page,
+                market_page,
+                github_api,
+                github_ci_api,
+                assets,
+                guide,
+            ],
         )
         // .register("/", catchers![])
         .attach(Template::fairing())

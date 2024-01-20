@@ -1,5 +1,5 @@
 /*
- * Amethyst Website
+ * Hedwig Launcher Website
  * Copyright (C) 2023 Broken-Deer <old_driver__@outlook.com> and contributors
  *
  * This program is free software, you can redistribute it and/or modify

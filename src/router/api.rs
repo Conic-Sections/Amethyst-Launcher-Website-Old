@@ -1,7 +1,7 @@
 // const UPDATE_COMMAND: &[u8] = include_bytes!("../../update.sh");
 
-#[post("/api/ci", data = "<data>")]
-pub async fn github_ci_api(data: &str) -> &'static str {
+#[post("/api/ci", data = "<_data>")]
+pub async fn github_ci_api(_data: &str) -> &'static str {
     "Ok!"
     
 }

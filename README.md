@@ -1,2 +1,2 @@
-# magical-launcher-website
-Amethyst Launcher
+# Hedwig Launcher Website
+
