@@ -1,4 +1,4 @@
-name: Hedwig Webside Build
+name: Amethyst Webside Build
 on:
   push:
     branches:

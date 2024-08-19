@@ -1,2 +1,2 @@
-# Hedwig Launcher Website
+# Amethyst Launcher Website
 

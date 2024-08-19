@@ -13,5 +13,5 @@ Cargo.lock
 # MSVC Windows builds of rustc generate these, which store debugging information
 *.pdb
 
-hedwig-launcher-website
-hedwig-launcher-website.exe
+amethyst-launcher-website
+amethyst-launcher-website.exe

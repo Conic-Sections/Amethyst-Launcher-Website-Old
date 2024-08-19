@@ -9,21 +9,21 @@
 > 
 > 如果你需要报告问题，请前往[GitHub Issues](https://github.com/Broken-Deer/magical-launcher/issues)报告问题
 
-## 什么是 Hedwig 启动器?
+## 什么是 Amethyst 启动器?
 
-Hedwig 是 Minecraft 启动器，用于帮助用户下载、启动 Minecraft，同时提供了许多有用的工具管理游戏数据。
-Hedwig 基于 tauri 构建，并提供了一套安全的插件接口，方便用户自己向启动器添加功能并分享给其他用户，同时确保安装者安全。
+Amethyst 是 Java 版 Minecraft 启动器，用于帮助用户下载、启动 Minecraft，同时提供了许多有用的工具管理游戏数据。
+Amethyst 基于 tauri 构建，并提供了一套安全的插件接口，方便用户自己向启动器添加功能并分享给其他用户，同时确保安装者安全。
 
 下面是一个最基本的示例:
 
 <!-- todo：演示视频 -->
 
-上面的示例展示了 Hedwig 的几个核心功能:
+上面的示例展示了 Amethyst 的几个核心功能:
 
 - **安装游戏与启动**: 可以安装游戏或者启动游戏。
-- **插件系统**: Hedwig 可以通过插件为启动器添加各种功能。
+- **插件系统**: Amethyst 可以通过插件为启动器添加各种功能。
 
-Hedwig 还具有许多有用的特性：
+Amethyst 还具有许多有用的特性：
 
 - 可以快速安装 `Minecraft`, `Forge`, `Fabric`, `Optifine`, `Quilt`, 会自动选择速度最快的镜像服务器安装游戏
 - **跨平台**，使用rust编写的启动器，能够在 Windows, MacOS 和 GNU/Linux 上运行，~~甚至可以在手机上运行~~

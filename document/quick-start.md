@@ -1,8 +1,8 @@
 # 快速上手
 
-## 安装 Hedwig
+## 安装 Amethyst
 
-你可以到[这里](https://www..org/)下载它。
+你可以到[这里](https://amethyst.btlcraft.top/)下载它。
 
 ## 使用开发版本
 
@@ -12,7 +12,7 @@
 2. 使用以下命令克隆存储库：
 
 ```sh
-git clone https://github.com/Broken-Deer/magical-launcher.git
+git clone https://github.com/Conic-Sections/magical-launcher.git
 cd magical-launcher
 ```
 
