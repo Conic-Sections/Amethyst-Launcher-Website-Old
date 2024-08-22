@@ -160,8 +160,8 @@ section.section3 {
     width: 528px;
     height: 170px;
     flex-direction: column;
-    border: 1px solid #ffffff3b;
-    background-color: rgb(24, 24, 24);
+    border: 1px solid #ffffff1e;
+    background-color: rgba(255, 255, 255, 0.041);
     border-radius: 10px;
     padding: 40px;
 }
@@ -190,9 +190,9 @@ section.section3 {
 }
 
 footer {
-    height: 80px;
+    height: 240px;
     width: 100vw;
-    background-color: #313131;
+    background-color: #2525256c;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -202,7 +202,14 @@ footer {
 footer a:-webkit-any-link,
 footer {
     color: #fff !important;
+    font-size: 16px;
     text-decoration: none;
+}
+
+footer p {
+    margin: 10px;
+    max-width: 1000px;
+    text-align: center;
 }
 
 footer a:hover {
